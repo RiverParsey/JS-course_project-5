@@ -1,3 +1,94 @@
+// lesson-8 Test Task
+
+// const items = [
+//   { name: "Motorola MOTO G4 (XT1622) Black", oldPrice: "4 333 грн", price: "3 799 грн", reviews: '264 reviews' },
+//   { name: "Samsung Galaxy J7 J700H/DS Black + карта памяти 16гб + чехол + защитное стекло!", price: "4 999 грн", reviews: '1355 reviews' },
+//   { name: "Samsung Galaxy J5 (2016) J510H/DS Black + защитное стекло + чехол!", price: "5 199 грн", reviews: '426 reviews' },
+//   { name: "Xiaomi Redmi Note 4X 3/32GB Black", price: "4 349 грн", reviews: '403 reviews' },
+//   { name: "Samsung Galaxy J7 (2016) J710F/DS Gold + защитное стекло + чехол!", price: "6 199 грн", reviews: '488 reviews' },
+//   { name: "Lenovo K5 (A6020a40) Silver", oldPrice: "3 495 грн", price: "2 995 грн", reviews: '198 reviews' },
+//   { name: "Apple iPhone 5s 16GB Space Gray", oldPrice: "9 799 грн", price: "7 999 грн", reviews: '352 reviews' },
+//   { name: "Nokia 5 Dual Sim Tempered Blue", price: "5 999 грн", reviews: '59 reviews' },
+//   { name: "Samsung Galaxy A5 2017 Duos SM-A520 Black + карта памяти 128гб!", price: "11 999 грн", reviews: '119 reviews' },
+//   { name: "Samsung Galaxy J5 J500H/DS Black + чехол + защитное стекло!", price: "3 999 грн", reviews: '1106 reviews' },
+//   { name: "Huawei Y3 II Tiffany (White-Blue) + чехол + защитное стекло!", price: "2 199 грн", reviews: '380 reviews' },
+//   { name: "Samsung Galaxy S8 64GB Midnight Black + карта памяти 64гб + оригинальный чехол!", oldPrice: "24 999 грн", price: "22 999 грн", reviews: '86 reviews' },
+//   { name: "Huawei P8 Lite 2017 White + УМБ Huawei AP08Q + защитное стекло + чехол!", price: "6 499 грн", reviews: '177 reviews' },
+//   { name: "Xiaomi Redmi 4X 3/32GB Black (Международная версия)", price: "4 299 грн", reviews: '347 reviews' },
+//   { name: "Samsung Galaxy J1 2016 SM-J120H Black + защитное стекло + чехол!", price: "2 799 грн", reviews: '709 reviews' },
+//   { name: "Huawei Y6 Pro Gold + чехол + защитное стекло!", price: "3 999 грн", reviews: '527 reviews' },
+//   { name: "Apple iPhone 6s 32GB Gold", price: "16 499 грн", reviews: '66 reviews' },
+// eslint-disable-next-line no-irregular-whitespace
+//   { name: "Apple iPhone 6 32GB Space Gray", price: "11 499 грн", reviews: '14 reviews' },
+//   { name: "Asus ZenFone 2 32GB (ZE551ML) Black", oldPrice: "7 399 грн", price: "5 999 грн", reviews: '70 reviews' },
+//   { name: "Nokia 3 Dual Sim Silver White + сертификаты 500 грн!", price  "4 299 грн", reviews: '45 reviews' },
+//   { name: "Meizu M3 Note 32GB Grey (Международная версия)", price: "3 899 грн", reviews: '376 reviews' },
+//   { name: "Sony Xperia X Dual (F5122) White", oldPrice: "9 999 грн", price: "7 999 грн", reviews: '111 reviews' },
+//   { name: "Lenovo Vibe C (A2020) Black + УМБ PowerPlant 5200 mAh в подарок!", price: "2 222 грн", reviews: '40 reviews' },
+//   { name: "Apple iPhone 7 32GB Black", price: "18 999 грн", reviews: '93 reviews' },
+//   { name: "Huawei P10 4/32GB Black + сертификат 2500грн + чехол Huawei Smart View Cover!", price: "16 999 грн", reviews: '33 reviews' },
+//   { name: "LG K5 X220ds Gold", oldPrice: "2 399 грн", price: "1 999 грн", reviews: '71 reviews' },
+//   { name: "Lenovo C2 Power (K10a40) Black", price: "2 995 грн", reviews: '39 reviews' },
+//   { name: "Nous NS 5006 Gold", price: "2 599 грн", reviews: '156 reviews' },
+//   { name: "LG G6 Mystic White", price: "19 689 грн", reviews: '40 reviews' },
+//   { name: "Motorola MOTO G5 (XT1676) Grey", price: "5 995 грн", reviews: '24 reviews' },
+//   { name: "HTC One X10 Dual Sim Silver", oldPrice: "10 999 грн", price: "9 999 грн", reviews: '7 reviews' },
+//   { name: "Sony Xperia L1 Dual Black", oldPrice: "5 999 грн", price: "4 999 грн", reviews: '18 reviews' }
+// ];
+
+// function sortByFeedbacks(arr) {
+//   const temp = JSON.parse(JSON.stringify(arr));
+
+//   temp.forEach(item => {
+//     item.reviews = +item.reviews.replace(/\D/g, '');
+//   });
+
+//   temp.sort((a, b) => a.reviews > b.reviews ? 1 : -1);
+
+//   document.querySelector('.result').innerHTML = '';
+
+//   temp.forEach(item => {
+//     document.querySelector('.result').innerHTML += `
+//       <h3>${item.name}</h3>
+//       <div>отзывов: ${item.reviews}</div>
+//     `;
+//   });
+// }
+
+// function sortByPrice(arr) {
+//   const temp = JSON.parse(JSON.stringify(arr));
+
+//   temp.forEach(item => {
+//     item.price = +item.price.replace(/\D/g, '');
+//   });
+
+//   temp.sort((a, b) => a.price > b.price ? 1 : -1);
+
+//   document.querySelector('.result').innerHTML = '';
+
+//   temp.forEach(item => {
+//     document.querySelector('.result').innerHTML += `
+//       <h3>${item.name}</h3>
+//       <div>цена: ${item.price}</div>
+//       <div>отзывов: ${item.reviews}</div>
+//     `;
+//   });
+// }
+
+// document.querySelector('.price').addEventListener('click', () => {
+//   sortByPrice(items);
+// });
+
+// document.querySelector('.feed').addEventListener('click', () => {
+//   sortByFeedbacks(items);
+// });
+
+
+
+
+
+
+
 // lesson-7 Test Tasks
 
 // const w = +prompt('ширина матрицы');
